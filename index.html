@@ -1,31 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIxBiomed</title>
-  <link rel="stylesheet" href="assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AixBiomed - AI-Powered Biomedical Innovation</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to AIxBiomed</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Events</a>
-      <a href="#">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AixBiomed</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
-  </header>
-  <main>
-    <h2>Upcoming Events</h2>
-    <ul>
-      <li>UKAIRS Symposium – 8-9 Sept 2025</li>
-      <li>MASAMB 2025 – 8-9 Sept 2025</li>
-      <li>Robotics Innovation Event – 11 Sept 2025</li>
-    </ul>
-  </main>
-  <footer>
-    <p>© 2025 AIxBiomed</p>
-  </footer>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="highlight">AixBiomed</span>
+                </h1>
+                <p class="hero-subtitle">Revolutionizing Biomedical Research Through Artificial Intelligence</p>
+                <p class="hero-description">
+                    A cutting-edge platform bridging the gap between AI innovation and biomedical discoveries, 
+                    empowering researchers to unlock new possibilities in healthcare and life sciences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">Explore Research</a>
+                    <a href="#contact" class="btn btn-secondary">Join Our Network</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About AixBiomed</h2>
+                <p>Pioneering the future of biomedical research through innovative AI solutions</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>We are a research-driven organization dedicated to advancing biomedical science through the power of artificial intelligence. Our interdisciplinary team combines expertise in machine learning, computational biology, and clinical research to tackle the most challenging problems in healthcare.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h4>AI-Driven Research</h4>
+                                    <p>Leveraging advanced machine learning algorithms to accelerate biomedical discoveries</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-network-wired"></i>
+                                <div>
+                                    <h4>Collaborative Network</h4>
+                                    <p>Building bridges between researchers, clinicians, and technologists worldwide</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-microscope"></i>
+                                <div>
+                                    <h4>Scientific Excellence</h4>
+                                    <p>Maintaining the highest standards of scientific rigor and reproducibility</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="visual-container">
+                            <div class="dna-helix">
+                                <div class="helix-strand strand-1"></div>
+                                <div class="helix-strand strand-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="section-header">
+                <h2>Research Areas</h2>
+                <p>Exploring frontiers across multiple biomedical domains</p>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Genomics & Precision Medicine</h3>
+                    <p>Developing AI models for genomic analysis, variant interpretation, and personalized treatment strategies.</p>
+                    <div class="card-footer">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Genomics</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <h3>Drug Discovery</h3>
+                    <p>Accelerating pharmaceutical research through AI-powered molecular design and drug-target interaction prediction.</p>
+                    <div class="card-footer">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Pharmaceuticals</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <h3>Medical Imaging</h3>
+                    <p>Enhancing diagnostic accuracy through advanced computer vision and medical image analysis techniques.</p>
+                    <div class="card-footer">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Diagnostics</span>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Clinical Decision Support</h3>
+                    <p>Building intelligent systems to assist healthcare professionals in diagnosis, treatment planning, and patient monitoring.</p>
+                    <div class="card-footer">
+                        <span class="tag">Clinical AI</span>
+                        <span class="tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Join our community events and research symposiums</p>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">XX</span>
+                        <span class="month">XX 2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>XXX Symposium</h3>
+                        <p>Annual symposium bringing together AI researchers and biomedical scientists to discuss latest innovations and collaborative opportunities.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Virtual & London</span>
+                            <span><i class="fas fa-users"></i> 500+ Attendees</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">XX</span>
+                        <span class="month">XX 2025</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>XX Event</h3>
+                        <p>XXX.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Manchester</span>
+                            <span><i class="fas fa-users"></i> 150+ Attendees</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resources & Tools</h2>
+                <p>Access cutting-edge tools and datasets for biomedical AI research</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3><i class="fas fa-database"></i> Datasets</h3>
+                    <ul>
+                        <li><a href="#">Biomedical Knowledge Graphs</a></li>
+                        <li><a href="#">Annotated Medical Images</a></li>
+                        <li><a href="#">Genomic Variant Collections</a></li>
+                        <li><a href="#">Clinical Trial Data</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <h3><i class="fas fa-tools"></i> Software Tools</h3>
+                    <ul>
+                        <li><a href="#">AI Model Library</a></li>
+                        <li><a href="#">Bioinformatics Pipeline</a></li>
+                        <li><a href="#">Visualization Tools</a></li>
+                        <li><a href="#">Statistical Analysis Suite</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <ul>
+                        <li><a href="#">AI in Biomedicine Course</a></li>
+                        <li><a href="#">Research Methodologies</a></li>
+                        <li><a href="#">Best Practices Guide</a></li>
+                        <li><a href="#">Webinar Series</a></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <h3><i class="fas fa-book-open"></i> Publications</h3>
+                    <ul>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Technical Reports</a></li>
+                        <li><a href="#">White Papers</a></li>
+                        <li><a href="#">Newsletter Archive</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Connect with our team and join the AixBiomed community</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@aixbiomed.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (0) XX XX XXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>AixBiomed Research Center<br>MIT, Cambridge, USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AixBiomed</h3>
+                    <p>Advancing biomedical research through artificial intelligence and collaborative innovation.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Datasets</a></li>
+                        <li><a href="#">Tools</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AixBiomed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Parallax Effect for Hero Shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.1);
+                shape.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.research-card, .event-card, .feature').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
