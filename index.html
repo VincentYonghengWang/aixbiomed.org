@@ -195,6 +195,11 @@
             object-fit: cover;
         }
 
+        .speaker-avatar i {
+            font-size: 1.5rem;
+            color: #667eea;
+        }
+
         .speaker-info strong {
             display: block;
             font-size: 1.1rem;
@@ -264,8 +269,37 @@
 
         .event-actions {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .action-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .qr-code {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .qr-code img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background: white;
+            padding: 4px;
+        }
+
+        .qr-code span {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            text-align: center;
         }
 
         .btn {
@@ -533,7 +567,7 @@
                                 <div class="speaker-list">
                                     <div class="speaker-item">
                                         <div class="speaker-avatar">
-                                            <i class="fas fa-user"></i>
+                                            <img src="assets/images/speakers/Vincent-Yongheng-Wang.jpg" alt="Dr. Vincent Yongheng Wang" />
                                         </div>
                                         <div class="speaker-info">
                                             <strong>Dr. Vincent Yongheng Wang</strong> (MIT CSAIL, Broad Institute)
@@ -543,7 +577,7 @@
                                     </div>
                                     <div class="speaker-item">
                                         <div class="speaker-avatar">
-                                            <i class="fas fa-user"></i>
+                                            <img src="assets/images/speakers/Paul-Bosco.jpg" alt="Dr. Paul Bosco" />
                                         </div>
                                         <div class="speaker-info">
                                             <strong>Dr. Paul Bosco</strong> (NSF)
@@ -632,8 +666,20 @@
                         </div>
                         
                         <div class="event-actions">
-                            <a href="#" class="btn btn-primary">Register Now</a>
-                            <a href="#" class="btn btn-secondary">View Full Agenda</a>
+                            <div class="action-group">
+                                <a href="https://forms.gle/DDu21NmMvvFLFSn26" target="_blank" class="btn btn-primary">Register Now</a>
+                                <div class="qr-code">
+                                    <img src="assets/images/speakers/Registration-QR-Code.jpg" alt="Registration QR Code" />
+                                    <span>Scan to Register</span>
+                                </div>
+                            </div>
+                            <div class="action-group">
+                                <a href="https://forms.gle/T418JPSMuLEVeadR7" target="_blank" class="btn btn-secondary">BP Submission</a>
+                                <div class="qr-code">
+                                    <img src="assets/images/speakers/BP-Submission-QR-Code.jpg" alt="BP Submission QR Code" />
+                                    <span>Scan to Submit</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -656,22 +702,6 @@
                         <div>
                             <h4>Email</h4>
                             <p>contact@aixbiomed.org</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+1 (0) XX XX XXXX</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>AIxBioMed<br>MIT, Cambridge, USA</p>
                         </div>
                     </div>
                     
@@ -718,16 +748,6 @@
                     <ul>
                         <li><a href="#events">Events</a></li>
                         <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">Newsletter</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Partnerships</a></li>
-                        <li><a href="#">Support</a></li>
                     </ul>
                 </div>
             </div>
