@@ -947,3 +947,603 @@ section {
         padding: 20px;
     }
 }
+
+/* Additional CSS - Add this to your existing style.css */
+
+/* Logo Integration */
+.logo-image {
+    height: 40px;
+    width: auto;
+    max-width: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+}
+
+/* Enhanced About Section */
+.mission-statement {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-text h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a2e;
+    text-align: center;
+}
+
+.mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mission-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #64ffda, #4fc3f7);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.highlight-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.highlight-text h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.highlight-text p {
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+/* Enhanced Events Section */
+.featured-event-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+.event-header-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.event-date-large {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    min-width: 120px;
+}
+
+.event-date-large .day {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date-large .year {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+.event-title-section h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.event-location {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.event-note {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.event-actions-hero {
+    display: flex;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qr-code img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: white;
+    padding: 4px;
+}
+
+.qr-code span {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Enhanced Event Schedule */
+.event-schedule {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.event-schedule h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a2e;
+    text-align: center;
+}
+
+.schedule-section {
+    margin-bottom: 3rem;
+}
+
+.schedule-section h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #667eea;
+    border-bottom: 2px solid #f0f8ff;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.schedule-section h5 i {
+    color: #4fc3f7;
+}
+
+/* Speaker Session Layout */
+.speaker-session {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.speaker-session:hover {
+    background: #f0f8ff;
+    transform: translateX(5px);
+    border-left-color: #64ffda;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nobel-speaker {
+    background: linear-gradient(135deg, #fff9e6, #fff3cd);
+    border-left-color: #FFD700 !important;
+}
+
+.nobel-speaker:hover {
+    background: linear-gradient(135deg, #fff6d9, #ffe5a3);
+}
+
+.session-time {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+}
+
+.time-slot {
+    background: #667eea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+}
+
+.special-badge {
+    background: #4fc3f7;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.session-content {
+    flex: 1;
+}
+
+.speaker-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.speaker-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-details h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #1a1a2e;
+}
+
+.speaker-title {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.speaker-topic {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.nobel-badge {
+    background: #FFD700;
+    color: #333;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Startup Section */
+.startup-section {
+    background: linear-gradient(135deg, #f8fafc, #e3f2fd);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #e1f5fe;
+}
+
+.startup-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.startup-details {
+    flex: 1;
+}
+
+.startup-note {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.startup-note i {
+    color: #f39c12;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.startup-note p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pitch-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.pitch-slot {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: #667eea;
+    border: 1px solid #e3f2fd;
+}
+
+/* Organizers Section */
+.organizers {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.organizers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.organizer-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.organizer-card:hover {
+    transform: translateY(-5px);
+}
+
+.organizer-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f0f8ff;
+}
+
+.organizer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.organizer-info h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+.organizer-title {
+    color: #667eea;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.organizer-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.organizer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.organizer-links a {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #64ffda, #4fc3f7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.organizer-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Enhanced Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn i {
+    font-size: 0.9rem;
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 35px;
+        max-width: 35px;
+    }
+
+    .event-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .event-header-info {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .event-actions-hero {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .action-item {
+        width: 100%;
+    }
+
+    .speaker-session {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .session-time {
+        flex-direction: row;
+        justify-content: center;
+        min-width: auto;
+    }
+
+    .speaker-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .mission-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .organizers-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .startup-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pitch-schedule {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-hero {
+        padding: 2rem;
+    }
+
+    .event-title-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .event-date-large {
+        padding: 1rem;
+        min-width: 100px;
+    }
+
+    .event-date-large .day {
+        font-size: 2rem;
+    }
+
+    .organizer-card {
+        padding: 2rem;
+    }
+
+    .speaker-session {
+        padding: 1rem;
+    }
+}
