@@ -3,549 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIxBIOMED - Events & Contact</title>
+    <title>AixBiomed - AI-Powered Biomedical Innovation</title>
+    <link rel="stylesheet" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8fafc;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Navigation */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-image {
-            height: 40px;
-            width: auto;
-            max-width: 40px;
-            object-fit: contain;
-        }
-
-        .nav-logo h2 {
-            color: #667eea;
-            font-weight: 700;
-            font-size: 1.8rem;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #667eea;
-        }
-
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background: #333;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        /* Section Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Events Section */
-        .events {
-            padding: 6rem 0;
-            margin-top: 80px;
-        }
-
-        .featured-event {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .event-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            gap: 1rem;
-        }
-
-        .event-header .event-date {
-            background: rgba(255,255,255,0.2);
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            min-width: 80px;
-        }
-
-        .event-title h3 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-subtitle {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-
-        .event-schedule {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1.5rem 0;
-        }
-
-        .schedule-section {
-            margin-bottom: 2rem;
-        }
-
-        .schedule-section h5 {
-            color: #fff;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .speaker-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .speaker-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .speaker-avatar {
-            flex-shrink: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #667eea;
-        }
-
-        .speaker-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .speaker-avatar i {
-            font-size: 1.5rem;
-            color: #667eea;
-        }
-
-        .speaker-info strong {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .speaker-info p {
-            margin: 0.3rem 0;
-            opacity: 0.9;
-            font-size: 0.9rem;
-        }
-
-        .time {
-            background: rgba(255,255,255,0.2);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .nobel-badge {
-            background: #FFD700;
-            color: #333;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        .keynote {
-            border-left: 4px solid #FFD700;
-        }
-
-        .startup-info {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .startup-sessions {
-            margin-top: 1rem;
-        }
-
-        .session-time {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .session-time span {
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .event-meta {
-            margin: 1.5rem 0;
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .event-meta span {
-            opacity: 0.9;
-        }
-
-        .event-actions {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-            justify-content: center;
-        }
-
-        .action-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .qr-code {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .qr-code img {
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            background: white;
-            padding: 4px;
-        }
-
-        .qr-code span {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            text-align: center;
-        }
-
-        .btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: #fff;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            background: #f1f5f9;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #fff;
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 0;
-            background: #fff;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-method i {
-            font-size: 1.5rem;
-            color: #667eea;
-            width: 40px;
-        }
-
-        .contact-method h4 {
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .contact-method p {
-            color: #666;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-
-        .contact-form {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a202c;
-            color: white;
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3,
-        .footer-section h4 {
-            margin-bottom: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #cbd5e0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #667eea;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #4a5568;
-            padding-top: 1rem;
-            text-align: center;
-            color: #cbd5e0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background-color: white;
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                padding: 2rem 0;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-toggle {
-                display: flex;
-            }
-
-            .logo-image {
-                height: 35px;
-                max-width: 35px;
-            }
-
-            .nav-logo h2 {
-                font-size: 1.5rem;
-            }
-
-            .event-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .speaker-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .event-actions {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .action-group {
-                width: 100%;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .event-meta {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/speakers/Logo.jpg" alt="AIxBIOMED Logo" class="logo-image">
-                <h2>AIxBIOMED</h2>
+                <img src="assets/images/speakers/Logo.jpg" alt="AixBiomed Logo" class="logo-image">
+                <h2>AixBiomed</h2>
             </div>
             <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#organizers" class="nav-link">Organizers</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-toggle">
@@ -556,195 +30,85 @@
         </div>
     </nav>
 
-    <!-- Events Section -->
-    <section id="events" class="events">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="highlight">AixBiomed</span>
+                </h1>
+                <p class="hero-subtitle">Revolutionizing Biomedical Research Through Artificial Intelligence</p>
+                <p class="hero-description">
+                    Strengthening communication and collaboration among scientists, founders, VCs, and funding agencies 
+                    to sustain and accelerate progress at the intersection of AI and biomedicine.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#events" class="btn btn-primary">View Events</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2>Upcoming Events</h2>
+                <h2>About Our Mission</h2>
+                <p>Building bridges between AI innovation and biomedical breakthroughs</p>
             </div>
             
-            <div class="events-grid">
-                <div class="event-card featured-event">
-                    <div class="event-header">
-                        <div class="event-date">
-                            <span class="day">October 4, 2025</span>
-                            <span class="month">MIT</span>
-                        </div>
-                        <div class="event-title">
-                            <h3>MIT AI BIO Snapshot Meeting</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="event-content">
+            <div class="about-content">
+                <div class="mission-statement">
+                    <div class="mission-text">
+                        <h3>Our Vision</h3>
+                        <p>This initiative is organized by <strong>Vincent Yongheng Wang (MIT)</strong> and <strong>Paul Bosco (NSF)</strong>. We are inviting founders, scientists, investors, and representatives from funding agencies.</p>
                         
-                        <div class="event-schedule">
-                            <h4>Event Schedule</h4>
-                            
-                            <div class="schedule-section">
-                                <h5>Part 1: Opening Remarks (11:10-11:20)</h5>
-                                <div class="speaker-list">
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Vincent-Yongheng-Wang.jpg" alt="Dr. Vincent Yongheng Wang" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Vincent Yongheng Wang</strong> (MIT CSAIL, Broad Institute)
-                                            <p>Inventor of Bioinformatics Copilot, Ex-VC. Overview of Recent Advances in AI BIO</p>
-                                            <span class="time">11:10-11:15</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/P.jpg" alt="Dr. " />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. </strong> (NSF)
-                                            <p>Training and funding opportunities in NSF, Boston and New England</p>
-                                            <span class="time">11:15-11:20</span>
-                                        </div>
-                                    </div>
+                        <p>Our goal is to strengthen communication and collaboration among scientists, founders, VCs, and funding agencies to sustain and accelerate progress at the intersection of AI and biomedicine.</p>
+                        
+                        <div class="mission-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="highlight-text">
+                                    <h4>Collaborative Network</h4>
+                                    <p>Connecting researchers, entrepreneurs, and investors</p>
                                 </div>
                             </div>
                             
-                            <div class="schedule-section">
-                                <h5>Part 2: Speeches (11:20-15:00)</h5>
-                                <div class="speaker-list">
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Geoffrey-von-Maltzahn.jpg" alt="Dr. Geoffrey von Maltzahn" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Geoffrey von Maltzahn</strong>
-                                            <p>General Partner at Flagship Pioneering, CEO of Harbinger Therapeutics</p>
-                                            <span class="time">11:10-11:25</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Vijay-Pande.jpg" alt="Dr. Vijay Pande" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Vijay Pande</strong>
-                                            <p>Previously founded a16z bio+health</p>
-                                            <span class="time">11:25-11:40</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item keynote">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/David-Baker.jpg" alt="Dr. David Baker" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Prof. David Baker</strong> (University of Washington)
-                                            <p><span class="nobel-badge">Nobel Prize</span> in Chemistry 2024 for computational protein design</p>
-                                            <span class="time">11:45-12:00</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Pushmeet-Kohli.jpg" alt="Dr. Pushmeet Kohli" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Pushmeet Kohli</strong> (Google DeepMind)
-                                            <p>AlphaGenome and AlphaFold</p>
-                                            <span class="time">12:00-12:20</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Yusuf-Roohani.jpg" alt="Dr. Yusuf Roohani" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Yusuf Roohani</strong> (Stanford, Arc Institute)
-                                            <p>Virtual Cell Challenge, In silico prediction of gene expression using STATE model</p>
-                                            <span class="time">12:25-12:45</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Manolis-Kellis.jpg" alt="Dr. Manolis Kellis" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Prof. Manolis Kellis</strong> (MIT)
-                                            <p>Visualize AI</p>
-                                            <span class="time">12:50-1:05</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Kevin-Yang.jpg" alt="Dr. Kevin Yang" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Kevin Yang</strong> (Microsoft)
-                                            <p>AI-assisted engineering of adeno-associated virus for gene therapy</p>
-                                            <span class="time">1:10-1:30</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Jacob-Witten.jpg" alt="Dr. Jacob Witten" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Jacob Witten</strong> (MIT)
-                                            <p>AI for lipid nanoparticle-based drug delivery</p>
-                                            <span class="time">1:40-2:00</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Zhiyong-Lu.jpg" alt="Dr. Zhiyong Lu" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Zhiyong Lu</strong> (NIH, University of Illinois Urbana-Champaign)
-                                            <p>TrialGPT, GeneAgent</p>
-                                            <span class="time">2:10-2:30</span>
-                                        </div>
-                                    </div>
-                                    <div class="speaker-item">
-                                        <div class="speaker-avatar">
-                                            <img src="assets/images/speakers/Pat-Walters.jpg" alt="Dr. Pat Walters" />
-                                        </div>
-                                        <div class="speaker-info">
-                                            <strong>Dr. Pat Walters</strong> (Relay Therapeutics)
-                                            <p>How AI is impacting drug discovery and the current challenges in the field?</p>
-                                            <span class="time">2:35-2:50</span>
-                                        </div>
-                                    </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="highlight-text">
+                                    <h4>Innovation Focus</h4>
+                                    <p>Accelerating AI-driven biomedical discoveries</p>
                                 </div>
                             </div>
                             
-                            <div class="schedule-section">
-                                <h5>Part 3: Startup Spotlight/Pitch (14:45-15:25)</h5>
-                                <div class="startup-info">
-                                    <p><strong>Note:</strong> This session will be restricted to speakers and 20+ selected VC partners. VCs will have access to the pitch deck pool.</p>
-                                    <div class="startup-sessions">
-                                        <div class="session-time">
-                                            <span>Team 1: 3:00-3:10</span>
-                                            <span>Team 2: 3:10-3:20</span>
-                                            <span>Team 3: 3:20-3:30</span>
-                                            <span>Team 4: 3:30-3:40</span>
-                                        </div>
-                                    </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-handshake"></i>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="event-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Your pitch decks will be accessiable to more than 30 venture firms, please do not share proprietary information. Thank you!</span>
-                        </div>
-                        
-                        <div class="event-actions">
-                            <div class="action-group">
-                                <a href="https://forms.gle/DDu21NmMvvFLFSn26" target="_blank" class="btn btn-primary">Register Now</a>
-                                <div class="qr-code">
-                                    <img src="assets/images/speakers/Registration-QR-Code.jpg" alt="Registration QR Code" />
-                                    <span>Scan to Register</span>
-                                </div>
-                            </div>
-                            <div class="action-group">
-                                <a href="https://forms.gle/T418JPSMuLEVeadR7" target="_blank" class="btn btn-secondary">BP Submission</a>
-                                <div class="qr-code">
-                                    <img src="assets/images/speakers/BP-Submission-QR-Code.jpg" alt="BP Submission QR Code" />
-                                    <span>Scan to Submit</span>
+                                <div class="highlight-text">
+                                    <h4>Strategic Partnerships</h4>
+                                    <p>Building lasting relationships across sectors</p>
                                 </div>
                             </div>
                         </div>
@@ -754,21 +118,360 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">       
-            <div class="about-content">
-                <div class="mission-statement">
-                    <h3>About</h3>
-                    <p>This event is organized by Vincent Yongheng Wang (MIT) and Paul Bosco (NSF). We are inviting founders, scientists, investors, and representatives from funding agencies. Our goal is to strengthen communication and collaboration among scientists, founders, VCs, and funding agencies to sustain and accelerate progress at the intersection of AI and biomedicine.</p>
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Event</h2>
+                <p>Join us for cutting-edge discussions at the intersection of AI and biomedicine</p>
+            </div>
+            
+            <div class="featured-event-container">
+                <div class="event-hero">
+                    <div class="event-header-info">
+                        <div class="event-date-large">
+                            <span class="day">October 4</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <div class="event-title-section">
+                            <h3>MIT AI BIO Snapshot Meeting</h3>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> MIT Campus, Cambridge, MA</p>
+                            <p class="event-note"><strong>Note:</strong> Pitch decks will be accessible to 30+ venture firms. Please do not share proprietary information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-actions-hero">
+                        <div class="action-item">
+                            <a href="https://forms.gle/DDu21NmMvvFLFSn26" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-user-plus"></i> Register Now
+                            </a>
+                            <div class="qr-code">
+                                <img src="assets/images/speakers/Registration-QR-Code.jpg" alt="Registration QR Code" />
+                                <span>Scan to Register</span>
+                            </div>
+                        </div>
+                        
+                        <div class="action-item">
+                            <a href="https://forms.gle/T418JPSMuLEVeadR7" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-file-upload"></i> Submit Pitch
+                            </a>
+                            <div class="qr-code">
+                                <img src="assets/images/speakers/BP-Submission-QR-Code.jpg" alt="BP Submission QR Code" />
+                                <span>Scan to Submit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Schedule -->
+                <div class="event-schedule">
+                    <h4>Event Schedule</h4>
+                    
+                    <!-- Opening Remarks -->
+                    <div class="schedule-section">
+                        <h5><i class="fas fa-play-circle"></i> Opening Remarks</h5>
+                        
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">11:10 - 11:15</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Vincent-Yongheng-Wang.jpg" alt="Dr. Vincent Yongheng Wang" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Vincent Yongheng Wang</h6>
+                                        <p class="speaker-title">MIT CSAIL, Broad Institute</p>
+                                        <p class="speaker-topic">Inventor of Bioinformatics Copilot, Ex-VC. Overview of Recent Advances in AI BIO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">11:15 - 11:20</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/P.jpg" alt="NSF Representative" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>NSF Representative</h6>
+                                        <p class="speaker-title">National Science Foundation</p>
+                                        <p class="speaker-topic">Training and funding opportunities in NSF, Boston and New England</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Speeches -->
+                    <div class="schedule-section">
+                        <h5><i class="fas fa-microphone"></i> Keynote Speeches</h5>
+                        
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">11:10 - 11:25</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Geoffrey-von-Maltzahn.jpg" alt="Dr. Geoffrey von Maltzahn" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Geoffrey von Maltzahn</h6>
+                                        <p class="speaker-title">General Partner at Flagship Pioneering</p>
+                                        <p class="speaker-topic">CEO of Harbinger Therapeutics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">11:25 - 11:40</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Vijay-Pande.jpg" alt="Dr. Vijay Pande" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Vijay Pande</h6>
+                                        <p class="speaker-title">Previously founded a16z bio+health</p>
+                                        <p class="speaker-topic">Investment strategies in AI-driven biotech</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session nobel-speaker">
+                            <div class="session-time">
+                                <span class="time-slot">11:45 - 12:00</span>
+                                <span class="special-badge">Keynote</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/David-Baker.jpg" alt="Prof. David Baker" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Prof. David Baker</h6>
+                                        <p class="speaker-title">University of Washington</p>
+                                        <span class="nobel-badge"><i class="fas fa-medal"></i> Nobel Prize in Chemistry 2024</span>
+                                        <p class="speaker-topic">Computational protein design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">12:00 - 12:20</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Pushmeet-Kohli.jpg" alt="Dr. Pushmeet Kohli" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Pushmeet Kohli</h6>
+                                        <p class="speaker-title">Google DeepMind</p>
+                                        <p class="speaker-topic">AlphaGenome and AlphaFold innovations</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">12:25 - 12:45</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Yusuf-Roohani.jpg" alt="Dr. Yusuf Roohani" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Yusuf Roohani</h6>
+                                        <p class="speaker-title">Stanford, Arc Institute</p>
+                                        <p class="speaker-topic">Virtual Cell Challenge, In silico prediction of gene expression using STATE model</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">12:50 - 1:05</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Manolis-Kellis.jpg" alt="Prof. Manolis Kellis" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Prof. Manolis Kellis</h6>
+                                        <p class="speaker-title">MIT</p>
+                                        <p class="speaker-topic">Visualize AI</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">1:10 - 1:30</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Kevin-Yang.jpg" alt="Dr. Kevin Yang" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Kevin Yang</h6>
+                                        <p class="speaker-title">Microsoft</p>
+                                        <p class="speaker-topic">AI-assisted engineering of adeno-associated virus for gene therapy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">1:40 - 2:00</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Jacob-Witten.jpg" alt="Dr. Jacob Witten" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Jacob Witten</h6>
+                                        <p class="speaker-title">MIT</p>
+                                        <p class="speaker-topic">AI for lipid nanoparticle-based drug delivery</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">2:10 - 2:30</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Zhiyong-Lu.jpg" alt="Dr. Zhiyong Lu" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Zhiyong Lu</h6>
+                                        <p class="speaker-title">NIH, University of Illinois Urbana-Champaign</p>
+                                        <p class="speaker-topic">TrialGPT, GeneAgent</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="speaker-session">
+                            <div class="session-time">
+                                <span class="time-slot">2:35 - 2:50</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="speaker-info">
+                                    <div class="speaker-avatar">
+                                        <img src="assets/images/speakers/Pat-Walters.jpg" alt="Dr. Pat Walters" />
+                                    </div>
+                                    <div class="speaker-details">
+                                        <h6>Dr. Pat Walters</h6>
+                                        <p class="speaker-title">Relay Therapeutics</p>
+                                        <p class="speaker-topic">How AI is impacting drug discovery and current challenges in the field</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Startup Spotlight -->
+                    <div class="schedule-section startup-section">
+                        <h5><i class="fas fa-rocket"></i> Startup Spotlight & Pitch Session</h5>
+                        <div class="startup-info">
+                            <div class="session-time">
+                                <span class="time-slot">2:45 - 3:25</span>
+                            </div>
+                            <div class="session-content">
+                                <div class="startup-details">
+                                    <div class="startup-note">
+                                        <i class="fas fa-lock"></i>
+                                        <p><strong>Restricted Access:</strong> This session is limited to speakers and 20+ selected VC partners. VCs will have access to the pitch deck pool.</p>
+                                    </div>
+                                    <div class="pitch-schedule">
+                                        <div class="pitch-slot">Team 1: 3:00-3:10</div>
+                                        <div class="pitch-slot">Team 2: 3:10-3:20</div>
+                                        <div class="pitch-slot">Team 3: 3:20-3:30</div>
+                                        <div class="pitch-slot">Team 4: 3:30-3:40</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="organizers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Organizers</h2>
+                <p>Meet the team behind this innovative initiative</p>
+            </div>
+            
+            <div class="organizers-grid">
+                <div class="organizer-card">
+                    <div class="organizer-avatar">
+                        <img src="assets/images/speakers/Vincent-Yongheng-Wang.jpg" alt="Dr. Vincent Yongheng Wang" />
+                    </div>
+                    <div class="organizer-info">
+                        <h4>Dr. Vincent Yongheng Wang</h4>
+                        <p class="organizer-title">MIT CSAIL, Broad Institute</p>
+                        <p class="organizer-description">Inventor of Bioinformatics Copilot and former venture capitalist with extensive experience in AI-driven biomedical research.</p>
+                        <div class="organizer-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="organizer-card">
+                    <div class="organizer-avatar">
+                        <img src="assets/images/speakers/P.jpg" alt="Paul Bosco" />
+                    </div>
+                    <div class="organizer-info">
+                        <h4>Paul Bosco</h4>
+                        <p class="organizer-title">National Science Foundation</p>
+                        <p class="organizer-description">Leading initiatives in funding and training opportunities for AI and biomedical research in the Boston and New England area.</p>
+                        <div class="organizer-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Connect with our team and join the AixBiomed community</p>
+            </div>
             
             <div class="contact-content">
                 <div class="contact-info">
@@ -788,6 +491,22 @@
                     </div>
                 </div>
                 
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -798,14 +517,33 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>AIxBIOMED</h3>
+                    <h3>AixBiomed</h3>
                     <p>Advancing biomedical research through artificial intelligence and collaborative innovation.</p>
                 </div>
-
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#organizers">Organizers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 AIxBIOMED All rights reserved.</p>
+                <p>&copy; 2025 AixBiomed. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -838,10 +576,21 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.classList.add('scrolled');
             } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.classList.remove('scrolled');
             }
+        });
+
+        // Parallax Effect for Hero Shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.1);
+                shape.style.transform = `translateY(${scrolled * speed}px)`;
+            });
         });
     </script>
 </body>
