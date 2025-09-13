@@ -371,32 +371,8 @@ section {
 .event-header-top {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    justify-content: flex-start;
-}
-
-.event-date-large {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    min-width: 120px;
-    flex-shrink: 0;
-}
-
-.event-date-large .day {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1;
-}
-
-.event-date-large .year {
-    display: block;
-    font-size: 1rem;
-    opacity: 0.9;
-    margin-top: 0.5rem;
+    justify-content: center; /* Changed from flex-start to center */
+    text-align: center; /* Added text-align center */
 }
 
 .event-title-section {
@@ -406,8 +382,15 @@ section {
 .event-title-section h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     line-height: 1.2;
+}
+
+.event-title-section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.9;
 }
 
 .event-actions-hero {
