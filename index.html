@@ -579,9 +579,73 @@
             <div class="section-header">
                 <h2>Acknowledgment</h2>
                 <p>We would like to thank <a href="https://cap.csail.mit.edu/members/events/mit-ai-bio-frontiers-forum">MIT Computer Science & Artificial Intelligence Laboratory</a>, <a href="https://biotech.mit.edu/basics-of-biotech/">MIT BIOTECH GROUP</a>, Prof. Manolis Kellis, Dr. Paul Bosco, Dr. Glenn Wong, Christiana Kalfas, Dr. Yousef Liang, Manoj M Wagle, Ayantu Tamene, Jeannie She, Clarence Zheng, Vera Zhang, Jiacheng Hu, Yofi Wyle, Victoria Park, Soham Samanta, Farhan Ahmad, Xianmu Li and <a href="https://engineering.mit.edu/2024-2025-fellows-for-mit-novo-nordisk-artificial-intelligence-postdoctoral-fellows-program/">MIT-Novo Nordisk Artificial Intelligence Postdoctoral Fellows Program</a> for their support of this event.</p>
+                
+                <!-- Sponsor Logos -->
+                <div class="sponsor-logos">
+                    <div class="logo-item">
+                        <img src="assets/images/speakers/MIT-CSAIL.jpg" alt="MIT Computer Science & Artificial Intelligence Laboratory" class="sponsor-logo" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/speakers/MBG.jpg" alt="MIT Biotech Group" class="sponsor-logo" />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    
+    <style>
+    /* Sponsor Logos Styles */
+    .sponsor-logos {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        flex-wrap: wrap;
+    }
+    
+    .logo-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sponsor-logo {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        filter: grayscale(0.2);
+    }
+    
+    .sponsor-logo:hover {
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .sponsor-logos {
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .sponsor-logo {
+            height: 60px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .sponsor-logos {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .sponsor-logo {
+            height: 50px;
+        }
+    }
+    </style>  
 
     <!-- Previous Event Section -->
     <section id="previous-event" class="previous-event">
@@ -602,6 +666,7 @@
     </section>
     
     <style>
+        
     /* Previous Event Section Styles */
     .previous-event {
         padding: 80px 0;
